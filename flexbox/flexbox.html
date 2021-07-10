@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexibale</title>
+    <style>
+        .container {
+            height: 500px;
+            border: 2px dashed chartreuse;
+            display: flex;
+            /* horizental center */
+            justify-content: center;
+            /* vertical center */
+            align-items: center;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border: 1px dashed;
+        }
+        /*  flex-grow: 1; only box-2 is flexible but box-1 is fixed */
+        #box-2 {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>m flexibale here </h1>
+    <div class="container">
+        <div class="box">box-1</div>
+        <div id="box-2" class="box">box-2</div>
+    </div>
+
+
+</body>
+
+</html>
