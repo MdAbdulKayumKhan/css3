@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>custom properties</title>
+    <style>
+        /* custom property or variable */
+        :root {
+            --side-width: 200px;
+            --dark-border: 2px solid green;
+            --main-color: orange;
+            --border-color: rgb(17, 14, 37);
+
+
+        }
+
+        h1 {
+            color: var(--main-color);
+
+        }
+
+        p {
+            color: var(--border-color);
+        }
+
+        h2 {
+            color: blue;
+            border: var(--dark-border);
+        }
+
+        h6 {
+            color: blue;
+        }
+
+        /* pasa pashi ashbe  */
+        .side-nav,
+        .blogs {
+            float: left;
+            /* border: 1px solid red; */
+            height: 500px;
+        }
+
+        .side-nav {
+            background-color: springgreen;
+            width: 100px;
+        }
+
+        .blogs {
+            background-color: yellow;
+            /* width: calc(100% - 200px); */
+            /* width: calc(100% - var(--side-width)); */
+            /* 2*var() mane right side thekeo 2*200px sore ashbe  */
+            width: calc(100% - 2*var(--side-width));
+        }
+
+        footer {
+            /* er both pashe keu thakbe na  */
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>I m exploring custom css properties</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, similique.</p>
+    </header>
+    <main>
+        <h2> main content</h2>
+        <h6>main content 6</h6>
+        <section>
+            <aside class="side-nav">
+                Lorem ipsum dolor sit amet
+            </aside>
+            <div class="blogs">
+                <p>commodi doloribus porro minima?</p>
+            </div>
+
+        </section>
+
+
+
+    </main>
+    <footer>
+        <p><small>copyright</small></p>
+    </footer>
+
+</body>
+
+</html>
